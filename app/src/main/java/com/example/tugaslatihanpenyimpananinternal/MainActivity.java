@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intentDaftar = new Intent(MainActivity.this, DaftarActivity.class);
+                intentDaftar.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intentDaftar);
             }
         });
