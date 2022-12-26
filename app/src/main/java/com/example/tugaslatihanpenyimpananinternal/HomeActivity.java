@@ -20,7 +20,7 @@ public class HomeActivity extends AppCompatActivity {
 
         if (!login) {
             Intent intentMain = new Intent(HomeActivity.this, MainActivity.class);
-            startActivity(intentMain);
+            intentMain.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intentMain);
         }
     }

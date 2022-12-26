@@ -39,7 +39,9 @@ public class DaftarActivity extends AppCompatActivity {
                         "Akun dengan NIM " + user.nim + " berhasil dibuat silahkan login menggunakan " +
                                 "Akun yang telah dibuat",
                         Toast.LENGTH_LONG).show();
-                finish();
+                Intent intentMain = new Intent(DaftarActivity.this, MainActivity.class);
+                intentMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intentMain);
             }
         }.execute();
     }
@@ -59,7 +61,9 @@ public class DaftarActivity extends AppCompatActivity {
         tombolKembali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intentMain = new Intent(DaftarActivity.this, MainActivity.class);
+                intentMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intentMain);
             }
         });
 
